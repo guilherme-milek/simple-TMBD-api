@@ -1,11 +1,21 @@
 {
   "name": "simple-TMBD-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./src/server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "npx nodemon ./src/server.js",
+    "test": "jest",
+    "heroku-postbuild": "cd client && yarn && yarn run build"
+  },
   "repository": "git@github.com:guilherme-milek/simple-TMBD-api.git",
   "author": "Guilherme Preveda Milek <guilhermeprevedamilek@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.3"
+    "axios": "^0.26.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7"
   }
 }
