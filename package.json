@@ -6,7 +6,7 @@
     "start": "node server.js",
     "dev": "npx nodemon ./src/server.js",
     "test": "jest",
-    "heroku-postbuild": "cd client && yarn && yarn run build"
+    "heroku-postbuild": "cd ./src/client && yarn && yarn run build"
   },
   "repository": "git@github.com:guilherme-milek/simple-TMBD-api.git",
   "author": "Guilherme Preveda Milek <guilhermeprevedamilek@gmail.com>",
