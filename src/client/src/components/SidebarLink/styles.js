@@ -2,8 +2,26 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
-  gap: 7.5px;
+  gap: 10px;
+
+  a {
+    color: var(--dark_gray);
+    font-size: 16px;
+
+    transition: 200ms color;
+  }
+
+  :hover {
+    a {
+      color: var(--black);
+    }
+
+    .icon {
+      background: var(--dark-green);
+    }
+  }
+
+  cursor: pointer;
 `;
 
 export const IconContainer = styled.div`
@@ -11,13 +29,16 @@ export const IconContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  width: 35px;
-  height: 20px;
+  background: var(--green);
+  color: var(--white);
+
+  width: 31px;
+  height: 17px;
   border-radius: 5px;
 
-  background: green;
-  color: white;
+  font-size: 11px;
   font-weight: bolder;
-  font-size: 12px;
   text-transform: uppercase;
+
+  transition: 200ms background, 200ms color;
 `;

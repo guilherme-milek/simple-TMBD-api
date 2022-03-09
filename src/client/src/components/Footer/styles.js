@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const Background = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: black;
+  background-color: var(--black);
   z-index: 1;
 
   @media (min-width: 768px) {
@@ -13,16 +12,16 @@ export const Background = styled.div`
 `;
 
 export const Container = styled.div`
-  max-width: 1024px;
   width: 100%;
+  max-width: 1024px;
 
   padding: 10px;
-  color: white;
 
   font-size: 13px;
+  color: var(--white);
 
   a {
-    color: white;
     font-weight: bold;
+    color: var(--white);
   }
 `;

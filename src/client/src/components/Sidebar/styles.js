@@ -5,7 +5,7 @@ export const Container = styled.div`
   padding: 30px;
   width: 100%;
 
-  background: white;
+  background: var(--white);
 
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@ export const Container = styled.div`
 
   gap: 25px;
 
-  color: black;
+  color: var(--black);
 
   summary {
     width: 100%;
@@ -25,14 +25,18 @@ export const Container = styled.div`
 
   button {
     background: transparent;
-    color: white;
+    color: var(--white);
     font-size: 20px;
     border: none;
   }
 
-  a,
-  button {
-    color: black;
+  a {
+    color: var(--dark_gray);
+    font-size: 16px;
+  }
+
+  a:hover {
+    color: var(--black);
   }
 
   @media (min-width: 768px) {
@@ -55,6 +59,8 @@ export const Container = styled.div`
       text-align: start;
       font-size: 17px;
       font-weight: bold;
+
+      cursor: pointer;
     }
   }
 `;

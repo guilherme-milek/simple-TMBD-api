@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const Background = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
-  background: rgba(240, 240, 240, 0.8);
+
+  background: var(--transparent-white);
   backdrop-filter: blur(10px);
+
   position: fixed;
 
   z-index: 2;
@@ -17,13 +18,15 @@ export const Background = styled.div`
 `;
 
 export const Container = styled.div`
-  width: 100%;
-  height: 60px;
   display: flex;
   justify-content: space-between;
+
+  width: 100%;
+  max-width: 1024px;
+  height: 60px;
+
   align-items: center;
   padding: 0 10px;
-  max-width: 1024px;
 
   h1 {
     font-size: 25px;
@@ -33,10 +36,13 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
     background: transparent;
     border: none;
+
     width: 30px;
     height: 30px;
+
     font-size: 20px;
   }
 
