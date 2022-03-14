@@ -42,14 +42,14 @@ const endpoints = {
       examples: [
         {
           title: "Exemplo 1",
-          link: "https://simple-tmdb-api.herokuapp.com/search?query=Os incríveis&language=pt-BR",
+          link: "/search?query=Os incríveis&language=pt-BR",
           description:
             'Busca por "Os Incríveis" em todas as categorias, mostrando os resultados em português do Brasil',
         },
         {
           title: "Exemplo 2",
 
-          link: "https://simple-tmdb-api.herokuapp.com/search?query=adam sandler",
+          link: "/search?query=adam sandler",
           description: 'Busca por "Adam Sandler" em todas as categorias',
         },
       ],
@@ -108,13 +108,13 @@ const endpoints = {
       examples: [
         {
           title: "Exemplo 1",
-          link: "https://simple-tmdb-api.herokuapp.com/search/movie?query=Avengers",
+          link: "/search/movie?query=Avengers",
           description: 'Busca por "Avengers" na categoria filmes',
         },
         {
           title: "Exemplo 2",
 
-          link: "https://simple-tmdb-api.herokuapp.com/search/movie?query=Todo mundo em pânico&language=pt-BR",
+          link: "/search/movie?query=Todo mundo em pânico&language=pt-BR",
           description:
             'Busca por "Todo mundo em pânico" na categoria filmes, mostrando os resultados em português do Brasil',
         },
@@ -161,13 +161,13 @@ const endpoints = {
       examples: [
         {
           title: "Exemplo 1",
-          link: "https://simple-tmdb-api.herokuapp.com/search/tv?query=Friends",
+          link: "/search/tv?query=Friends",
           description: 'Busca por "Friends" na categoria programas de TV',
         },
         {
           title: "Exemplo 2",
 
-          link: "https://simple-tmdb-api.herokuapp.com/search/tv?query=Eu, a patroa e as crianças&language=pt-BR",
+          link: "/search/tv?query=Eu, a patroa e as crianças&language=pt-BR",
           description:
             'Busca por "Eu, a patroa e as crianças" na categoria programas de TV, mostrando os resultados em português do Brasil',
         },
@@ -214,13 +214,13 @@ const endpoints = {
       examples: [
         {
           title: "Exemplo 1",
-          link: "https://simple-tmdb-api.herokuapp.com/search/person?query=Chris Evans",
+          link: "/search/person?query=Chris Evans",
           description: 'Busca por "Chris Evans" na categoria pessoas',
         },
         {
           title: "Exemplo 2",
 
-          link: "https://simple-tmdb-api.herokuapp.com/search/person?query=Robert Downey Jr&language=pt-BR",
+          link: "/search/person?query=Robert Downey Jr&language=pt-BR",
           description:
             'Busca por "Robert Downey Jr" na categoria filmes, mostrando os resultados em português do Brasil',
         },
@@ -240,19 +240,22 @@ const endpoints = {
             {
               value: "all",
               description:
-                "Include all movies, TV shows and people in the results as a global trending list.",
+                "Inclui todos os filmes, programas de TV e pessoas nos resultados como uma lista de tendência global.",
             },
             {
               value: "movie",
-              description: "Show the trending movies in the results.",
+              description:
+                "Mostra os filmes que estão em tendência nos resultados.",
             },
             {
               value: "tv",
-              description: "Show the trending TV shows in the results.",
+              description:
+                "Mostra os programas de TV que estão em tendência nos resultados.",
             },
             {
               value: "person",
-              description: "Show the trending people in the results.",
+              description:
+                "Mostra as pessoas que estão em tendência nos resultados.",
             },
           ],
         },
@@ -261,11 +264,11 @@ const endpoints = {
           values: [
             {
               value: "day",
-              description: "View the trending list for the day.",
+              description: "Visualize uma lista de tendências do dia.",
             },
             {
               value: "week",
-              description: "View the trending list for the week.",
+              description: "Visualize uma lista de tendências da semana.",
             },
           ],
         },
@@ -288,19 +291,19 @@ const endpoints = {
       examples: [
         {
           title: "Exemplo 1",
-          link: "https://simple-tmdb-api.herokuapp.com/trending",
+          link: "/trending",
           description:
             "Retorna uma lista de filmes e programas de TV que estão em tendência no mundo nessa semana",
         },
         {
           title: "Exemplo 2",
-          link: "https://simple-tmdb-api.herokuapp.com/trending/movie",
+          link: "/trending/movie",
           description:
             "Retorna uma lista de filmes que estão em tendência no mundo nessa semana",
         },
         {
           title: "Exemplo 3",
-          link: "https://simple-tmdb-api.herokuapp.com/trending/tv/day",
+          link: "/trending/tv/day",
           description:
             "Retorna uma lista de programas de TV que estão em tendência no mundo nesso dia de hoje",
         },

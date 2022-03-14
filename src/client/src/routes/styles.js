@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -40,13 +40,17 @@ export const Aside = styled.aside`
   height: 100vh;
 
   position: fixed;
-  top: 100%;
-  ${({ menuStatus }) => menuStatus && `top: 0;`}
+  transform: translateY(0%);
+
+  transition: 500ms transform;
+
+  ${({ menuStatus }) =>
+    menuStatus &&
+    css`
+      transform: translateY(-100%);
+    `}
 
   z-index: 2;
-
-  background: var(--transparent-black);
-  backdrop-filter: blur(10px);
 
   @media (min-width: 768px) {
     border-right: 1px solid var(--light-gray);
@@ -56,7 +60,8 @@ export const Aside = styled.aside`
     height: 100%;
 
     position: relative;
-    top: 0;
+    transform: translateY(-100%);
+    top: 100%;
 
     background: var(--white);
     backdrop-filter: none;

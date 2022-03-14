@@ -6,6 +6,8 @@ import {
   SectionContainer,
 } from "./styles";
 
+import { baseURL } from "../../services/api";
+
 export default function Definition({
   queryParameters,
   pathParameters,
@@ -88,7 +90,10 @@ export default function Definition({
             <div key={index} className="example">
               <h4>{title}</h4>
               <div className="code">
-                <code>{link}</code>
+                <code>
+                  {baseURL}
+                  {link}
+                </code>
               </div>
               <p>{description}</p>
             </div>

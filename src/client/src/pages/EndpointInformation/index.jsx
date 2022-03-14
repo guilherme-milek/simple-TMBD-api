@@ -2,7 +2,9 @@ import { Container, SectionContainer, Informations } from "./styles";
 
 import endpoints from "../../database/endpoints";
 import { useParams } from "react-router-dom";
-import Definition from "../../components/Definition";
+
+import ValidValues from "../../components/ValidValues";
+import EndpointTabSwitcher from "../../components/EndpointTabSwitcher";
 
 export default function EndpointInformation({ endpoint, standard }) {
   const { filter } = useParams();
@@ -28,42 +30,18 @@ export default function EndpointInformation({ endpoint, standard }) {
 
         {!!validValues && (
           <SectionContainer>
-            <h3>Valores válidos</h3>
-            {validValues.map(({ title, values }, index) => (
-              <div className="valid-values" key={index}>
-                <h4>{title}</h4>
-                <table>
-                  <tbody>
-                    {values.map(({ value, description }, index) => {
-                      return (
-                        <tr key={index} className="table-row">
-                          <td className="table-data">
-                            <p>{value}</p>
-                          </td>
-                          <td className="table-data">
-                            <p>{description}</p>
-                          </td>
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
-            ))}
+            <ValidValues validValues={validValues} title="Valores válidos" />
           </SectionContainer>
         )}
       </Informations>
-      <Definition
+
+      <EndpointTabSwitcher
         queryParameters={queryParameters}
         pathParameters={pathParameters}
         examples={examples}
+        endpoint={endpoint}
+        filter={filter}
       />
     </Container>
   );
 }
-
-/*  <Definition
-        queryParameters={queryParameters}
-        pathParameters={pathParameters}
-        examples={examples}
-      /> */

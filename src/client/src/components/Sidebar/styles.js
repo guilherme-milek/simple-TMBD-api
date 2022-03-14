@@ -15,6 +15,8 @@ export const Container = styled.div`
 
   color: var(--black);
 
+  box-shadow: 0px 0px 15px var(--transparent-black);
+
   summary {
     width: 100%;
 
@@ -28,6 +30,10 @@ export const Container = styled.div`
     color: var(--white);
     font-size: 20px;
     border: none;
+
+    &.close-button {
+      color: var(--black);
+    }
   }
 
   a {
@@ -50,6 +56,8 @@ export const Container = styled.div`
     align-items: flex-start;
 
     gap: 25px;
+
+    box-shadow: none;
 
     svg {
       display: none;

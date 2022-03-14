@@ -1,4 +1,10 @@
 const sidebar = {
+  comecando: [
+    {
+      to: "/comecando/images",
+      text: "Imagens",
+    },
+  ],
   search: [
     {
       to: "/search/",

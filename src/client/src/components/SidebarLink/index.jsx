@@ -5,7 +5,7 @@ import { Container, IconContainer } from "./styles";
 export default function SidebarLink({ children, to, type, onClick }) {
   return (
     <Container>
-      <IconContainer className="icon">{type}</IconContainer>
+      {!!type && <IconContainer className="icon">{type}</IconContainer>}
       <Link to={to} onClick={onClick}>
         {children}
       </Link>

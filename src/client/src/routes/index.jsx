@@ -4,13 +4,14 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import Home from "../pages/Home";
 import EndpointInformation from "../pages/EndpointInformation";
+import Informations from "../pages/Informations";
 
 import { Container, MainContent, Aside, Background } from "./styles.js";
 import { useState } from "react";
 import Footer from "../components/Footer";
 
 export default function Routes() {
-  const [menuStatus, setMenuStatus] = useState(false);
+  const [menuStatus, setMenuStatus] = useState(true);
 
   const handleClick = () => {
     setMenuStatus(!menuStatus);
@@ -31,7 +32,10 @@ export default function Routes() {
           <MainContent>
             <Switch>
               <Route exact path="/">
-                <Home />
+                <Home standard="images" />
+              </Route>
+              <Route path="/comecando/:filter?">
+                <Informations />
               </Route>
               <Route path="/search/:filter?">
                 <EndpointInformation endpoint="search" standard="multi" />

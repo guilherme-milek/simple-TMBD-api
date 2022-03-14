@@ -16,6 +16,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "nodemon": "^2.0.15",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "react-hook-form": "^7.28.0",
+    "react-json-view": "^1.21.3"
   }
 }
